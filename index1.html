@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Srisha Das</title>
+    <!-- Animation for Home section-->
+     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- custom css-->
+    <link rel="stylesheet" href="./css/style.css">
+   
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> Srisha</a>
+        <nav class="navbar">
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        <div class='bx  bx-sun' id="lightMode-icon"></div> 
+        <div class='bx  bx-menu'  id="menu-icon"></div>
+    </header>
+    <section class="home" id="home">
+        <div id="particles-js"></div>
+        <div class="home-img">
+            <img src="./images/Profile_pic.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span> Srisha</span></h1> 
+            <h3 class="typing-text">I'm a <span id="typed"></span></h3>
+            <p>Sophomore at NTU, majoring in Computer Science </p>
+            <p>Passionate about building impactful digital solutions</p>
+            <p>Enjoy combining creativity with logic... </p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/srisha-das-468459345/" target="_blank"><i class='bx  bxl-linkedin'  ></i></a> 
+                <a href="https://github.com/Srisha-007" target="_blank"><i class='bx  bxl-github'  ></i></a> 
+                <a href="mailto:srishadas24@gmail.com"><i class='bx  bxl-gmail'  ></i> </a> 
+            </div>
+            <a href="#contact" class="btn">Contact me</a>
+        </div>
+    </section>
+
+    <!-- About section-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./images/Profile_pic.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p>
+                I'm a driven Computer Science undergraduate at Nanyang Technological University (NTU), Singapore, with a strong foundation in programming and problem-solving. I’m passionate about exploring cutting-edge technologies and creating real-world solutions that make a meaningful impact. 
+            </p>
+            <p>
+                I have experience with Python, C, and Java through academic and personal projects, and I’m currently expanding my skill set by diving deeper into frontend development and UI/UX design.
+            </p>
+            <a href="files/Resume_Das Srisha copy.pdf" class="btn" target="_blank">View CV</a>
+        </div>
+    </section>
+    
+    <!-- Projects section-->
+    <section class="projects" id="projects">
+        <h2 class="heading">My<span> Projects</span></h2>
+        <div class="projects-container">
+            <div class="projects box">
+                <h3>
+                    <i class="bx bx-restaurant"></i>
+                    Food Ordering System <span class="project-date">Jan 2024 - Feb 2024</span>
+                </h3>
+                <ul>
+                    <li><strong>User Interface (Console-Based):</strong> Designed a seamless console application to enable customers to easily navigate restaurant menus and place orders.</li>
+                    <li><strong>Database Integration:</strong> Utilized MySQL to manage restaurant data, menu items, and customer orders, ensuring smooth and accurate order processing.</li>
+                    <li><strong>Efficiency & Accuracy:</strong> Reduced human error and order processing time by automating order and billing processes for faster service.</li>
+                </ul>
+            </div>
+
+            <div class="projects box">
+                <h3>
+                    <i class="bx bx-user"></i>
+                    Personality Test <span class="project-date">Nov 2022 - Jan 2023</span>
+                </h3>
+                <ul>
+                    <li><strong>Interactive Console Interface:</strong> Designed an intuitive command-line interface allowing users to easily interact with the application and answer questions in a step-by-step manner.</li>
+                    <li><strong>Personality Categorization:</strong> Developed a logic-based algorithm to analyze responses and determine one of 16 personality types using Myers-Briggs Type Indicator (MBTI) framework.</li>
+                    <li><strong>Data Handling:</strong> Managed user responses and ensured accurate computation of the personality type based on predefined personality trait metrics.</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+     <!-- Skills section-->
+    <section class="skills" id="skills">
+        <h2 class="heading">My<span> Skills</span></h2>
+
+        <div class="skills-container">
+            <div class="skills-box">
+                <i class='bx  bx-code-alt'  ></i> 
+                <h3>Programming Languages</h3>
+                <p>Proficient in Python, C, Java, and JavaScript for building efficient and scalable solutions.</p>
+            </div>
+            <div class="skills-box">
+                <i class='bx  bx-laptop'  ></i> 
+                <h3>Web Development</h3>
+                <p>Building responsive and interactive web interfaces using HTML5, CSS3, and JavaScript.</p>
+            </div>
+            <div class="skills-box">
+                <i class='bx  bx-brain'  ></i> 
+                <h3>Problem Solving & Algorithms</h3>
+                <p>Strong foundation in algorithmic thinking and problem-solving cultivated through coursework and coding practice.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts section-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span> Me!</span></h2>
+
+       <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="ccccdca8-aa1a-49ea-9550-8e846b725190">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="number" name="phone" placeholder="Contact No.">
+                <input type="text" name="subject" placeholder="Email Subject">
+            </div>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <div id="form-message" style="margin-top: 1rem; font-weight: 500;"></div>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+    <!-- scroll reveal-->
+     <script src="https://unpkg.com/scrollreveal"></script>
+   <!-- Typed.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- custom js-->
+    <script src="js/script.js"></script>
+</body>
+</html>
