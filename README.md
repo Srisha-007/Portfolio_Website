@@ -32,16 +32,13 @@ This is a modern, responsive, and animated portfolio built to showcase my backgr
 
 ---
 
-## Project Structure
-portfolio/
-├── index.html
-├── css/
-│ └── style.css
-├── js/
-│ └── script.js
-├── images/
-│ └── Profile_pic.jpg
-├── files/
-│ └── Resume_Das Srisha copy.pdf
-└── README.md
+## What I Learned
+- Responsive UI design using HTML/CSS
+- DOM manipulation and animation with JavaScript
+- Integrating third-party libraries and APIs without frameworks
+- Enhancing user experience with animations and clean navigation
 
+---
+
+## Contact
+Feel free to reach out through the contact form on the site or connect with me on LinkedIn.
