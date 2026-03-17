@@ -83,42 +83,51 @@ form.addEventListener('submit', function(e) {
     });
 });
 /*======= Particles Background for Home Section =======*/
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    color: { value: "#00ffff" },
-    shape: { type: "circle" },
-    opacity: { value: 0.5 },
-    size: { value: 3 },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#00ffff",
-      opacity: 0.4,
-      width: 1
+function initParticles() {
+  const isLightMode = document.body.classList.contains('light-mode');
+  const particleColor = isLightMode ? '#5b63e9' : '#00ffff'; // purple for light, aqua for dark
+  
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80 },
+      color: { value: particleColor },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: particleColor,
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 3
+      }
     },
-    move: {
-      enable: true,
-      speed: 3
-    }
-  },
-  interactivity: {
-    events: {
-      onhover: { enable: true, mode: "repulse" },
-      onclick: { enable: true, mode: "push" }
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" }
+      },
+      modes: {
+        repulse: { distance: 100 },
+        push: { particles_nb: 4 }
+      }
     },
-    modes: {
-      repulse: { distance: 100 },
-      push: { particles_nb: 4 }
-    }
-  },
-  retina_detect: true
-});
-/*======== Light mode =======*/
-let lightModeIcon=document.querySelector('#lightMode-icon');
-lightModeIcon.onclick=() => {
-    document.body.classList.toggle('light-mode'); 
+    retina_detect: true
+  });
+}
 
+// Initial particles
+initParticles();
+
+// Update particles when light mode toggles
+let lightModeIcon = document.querySelector('#lightMode-icon');
+lightModeIcon.onclick = () => {
+    document.body.classList.toggle('light-mode'); 
+    
     if (lightModeIcon.classList.contains('bx-sun')) {
         lightModeIcon.classList.remove('bx-sun');
         lightModeIcon.classList.add('bx-moon');
@@ -127,4 +136,10 @@ lightModeIcon.onclick=() => {
         lightModeIcon.classList.add('bx-sun');
     }
 
+    // Destroy old particles and recreate with new color
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {});
+    }
+    setTimeout(initParticles, 100); // small delay to ensure destroy works
 };
+
